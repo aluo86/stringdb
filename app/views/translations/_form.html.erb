@@ -1,4 +1,4 @@
-<%= form_for(@translation) do |f| %>
+<%= form_for @translation, html: {class: "form-horizontal"} do |f| %>
   <% if @translation.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@translation.errors.count, "error") %> prohibited this translation from being saved:</h2>
@@ -12,48 +12,76 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :en_US, "en_US" %>
-    <%= f.text_area :en_US, class: "form-control" %>
+    <%= f.label :en_US, "en_US", class: "col-lg-2 control-label" %>
+    <div class="col-lg-8">
+      <%= f.text_area :en_US, class: "form-control ", rows: "1" %>
+    </div>
   </div>
   <div class="form-group">
-    <%= f.label :component %><%= f.text_area :component %>
+    <%= f.label :component, class: "col-lg-2 control-label"%>
+    <div class="col-lg-3">
+      <%= f.text_area :component, class: "form-control", rows: "1" %>
+    </div>
   </div>
-  <div class="field">
-    <label>String-ID<label><%= f.text_area :string_id %>
+  <div class="form-group">
+    <%= f.label :string_id, "String_ID", class: "col-lg-2 control-label"%>
+    <div class="col-lg-3">
+      <%= f.text_area :string_id, class: "form-control", rows: "1" %>
+    </div>
   </div>
-  <div class="field">
-    <label>en-GB<label><%= f.text_area :en_GB %>
+  <div class="form-group">
+    <%= f.label :en_GB, "en_GB", class: "col-lg-2 control-label" %>
+      <div class="col-lg-8">
+      <%= f.text_area :en_GB, class: "form-control", rows: "1" %>
+    </div>
   </div>
-  <div class="field">
-    <lable>es-MX</label><%= f.text_area :es_MX %>
+  <div class="form-group">
+    <%= f.label :es_MX, "es_MX", class: "col-lg-2 control-label" %>
+      <div class="col-lg-8">
+        <%= f.text_area :es_MX, class: "form-control", rows: "1" %>
+      </div>
   </div>
-  <div class="field">
-    fr-CA<br>
-    <%= f.text_area :fr_CA %>
+  <div class="form-group">
+    <%= f.label :fr_CA, "fr_CA", class: "col-lg-2 control-label" %>
+      <div class="col-lg-8">
+        <%= f.text_area :fr_CA, class: "form-control", rows: "1" %>
+      </div>
   </div>
-  <div class="field">
-    pt-BR<br>
-    <%= f.text_area :pt_BR %>
+  <div class="form-group">
+    <%= f.label :pt_BR, "pt_BR", class: "col-lg-2 control-label" %>
+      <div class="col-lg-8">
+        <%= f.text_area :pt_BR, class: "form-control", rows: "1" %>
+      </div>
   </div>
-  <div class="field">
-    da-DK<br>
-    <%= f.text_area :da_DK %>
+  <div class="form-group">
+    <%= f.label :da_DK, "da_DK", class: "col-lg-2 control-label" %>
+      <div class="col-lg-8">
+        <%= f.text_area :da_DK, class: "form-control", rows: "1" %>
+      </div>
   </div>
-  <div class="field">
-    sv-SE<br>
-    <%= f.text_area :sv_SE %>
+  <div class="form-group">
+    <%= f.label :sv_SE, "sv_SE", class: "col-lg-2 control-label" %>
+      <div class="col-lg-8">
+        <%= f.text_area :sv_SE, class: "form-control", rows: "1" %>
+      </div>
   </div>
-  <div class="field">
-    nb-NO<br>
-    <%= f.text_area :nb_NO %>
+  <div class="form-group">
+    <%= f.label :nb_NO, "nb_NO", class: "col-lg-2 control-label" %>
+      <div class="col-lg-8">
+        <%= f.text_area :nb_NO, class: "form-control", rows: "1" %>
+      </div>
   </div>
-  <div class="field">
-    fi-FI<br>
-    <%= f.text_area :fi_FI %>
+  <div class="form-group">
+    <%= f.label :fi_FI, "fi_FI", class: "col-lg-2 control-label" %>
+      <div class="col-lg-8">
+        <%= f.text_area :fi_FI, class: "form-control", rows: "1" %>
+      </div>
   </div>
-  <div class="field">
-    nl-NL<br>
-    <%= f.text_area :nl_NL %>
+  <div class="form-group">
+    <%= f.label :nl_NL, "nl_NL", class: "col-lg-2 control-label" %>
+      <div class="col-lg-8">
+        <%= f.text_area :nl_NL, class: "form-control", rows: "1" %>
+      </div>
   </div>
   <div class="actions">
     <%= f.submit %>
