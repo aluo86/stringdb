@@ -1,0 +1,65 @@
+<%= form_for(@translation) do |f| %>
+  <% if @translation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@translation.errors.count, "error") %> prohibited this translation from being saved:</h2>
+
+      <ul>
+      <% @translation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    en-US<br>
+    <%= f.text_area :en_US %>
+  </div>
+  <div class="field">
+    <%= f.label :component %><br>
+    <%= f.text_area :component %>
+  </div>
+  <div class="field">
+    String-ID<br>
+    <%= f.text_area :string_id %>
+  </div>
+  <div class="field">
+    en-GB<br>
+    <%= f.text_area :en_GB %>
+  </div>
+  <div class="field">
+    es-MX<br>
+    <%= f.text_area :es_MX %>
+  </div>
+  <div class="field">
+    fr-CA<br>
+    <%= f.text_area :fr_CA %>
+  </div>
+  <div class="field">
+    pt-BR<br>
+    <%= f.text_area :pt_BR %>
+  </div>
+  <div class="field">
+    da-DK<br>
+    <%= f.text_area :da_DK %>
+  </div>
+  <div class="field">
+    sv-SE<br>
+    <%= f.text_area :sv_SE %>
+  </div>
+  <div class="field">
+    nb-NO<br>
+    <%= f.text_area :nb_NO %>
+  </div>
+  <div class="field">
+    fi-FI<br>
+    <%= f.text_area :fi_FI %>
+  </div>
+  <div class="field">
+    nl-NL<br>
+    <%= f.text_area :nl_NL %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

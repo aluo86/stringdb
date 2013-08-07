@@ -1,0 +1,49 @@
+<h1>Listing translations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>en-US</th>
+      <th>Component</th>
+      <th>String-id</th>
+      <th>en-GB</th>
+      <th>es-MX</th>
+      <th>fr-CA</th>
+      <th>pt-BR</th>
+      <th>da-DK</th>
+      <th>sv-SE</th>
+      <th>nb-NO</th>
+      <th>fi-FI</th>
+      <th>nl-NL</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @translations.each do |translation| %>
+      <tr>
+        <td><%= translation.en_US %></td>
+        <td><%= translation.component %></td>
+        <td><%= translation.string_id %></td>
+        <td><%= translation.en_GB %></td>
+        <td><%= translation.es_MX %></td>
+        <td><%= translation.fr_CA %></td>
+        <td><%= translation.pt_BR %></td>
+        <td><%= translation.da_DK %></td>
+        <td><%= translation.sv_SE %></td>
+        <td><%= translation.nb_NO %></td>
+        <td><%= translation.fi_FI %></td>
+        <td><%= translation.nl_NL %></td>
+        <td><%= link_to 'Show', translation %></td>
+        <td><%= link_to 'Edit', edit_translation_path(translation) %></td>
+        <td><%= link_to 'Destroy', translation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Translation', new_translation_path %>

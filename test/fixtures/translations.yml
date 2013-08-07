@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  en_US: MyText
+  component: MyText
+  string_id: MyText
+  en_GB: MyText
+  es_MX: MyText
+  fr_CA: MyText
+  pt_BR: MyText
+  sv_SE: MyText
+  nb_NO: MyText
+  fi_FI: MyText
+  nl_NL: MyText
+
+two:
+  en_US: MyText
+  component: MyText
+  string_id: MyText
+  en_GB: MyText
+  es_MX: MyText
+  fr_CA: MyText
+  pt_BR: MyText
+  sv_SE: MyText
+  nb_NO: MyText
+  fi_FI: MyText
+  nl_NL: MyText
