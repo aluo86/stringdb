@@ -1,14 +1,19 @@
 <div class="page-header">
-  <h1>All of the Strings</h1>
+  <h1>All of the translaitons</h1>
 </div>
 
+<%= link_to "Create New Translation", new_translation_path, class: "btn btn-success" %>
 
-<table>
+
+<table class="table table-bordered">
   <thead>
     <tr>
-      <th>en-US</th>
+      <th></th>
+      <th></th>
+      <th></th>
       <th>Component</th>
       <th>String-id</th>
+      <th>en-US</th>
       <th>en-GB</th>
       <th>es-MX</th>
       <th>fr-CA</th>
@@ -18,18 +23,19 @@
       <th>nb-NO</th>
       <th>fi-FI</th>
       <th>nl-NL</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      
     </tr>
   </thead>
 
   <tbody>
     <% @translations.each do |translation| %>
       <tr>
-        <td><%= translation.en_US %></td>
+        <td><%= link_to 'Show', translation %></td>
+        <td><%= link_to 'Edit', edit_translation_path(translation) %></td>
+        <td><%= link_to 'Destroy', translation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <td><%= translation.component %></td>
         <td><%= translation.string_id %></td>
+        <td ><%= translation.en_US %></td>
         <td><%= translation.en_GB %></td>
         <td><%= translation.es_MX %></td>
         <td><%= translation.fr_CA %></td>
@@ -39,9 +45,7 @@
         <td><%= translation.nb_NO %></td>
         <td><%= translation.fi_FI %></td>
         <td><%= translation.nl_NL %></td>
-        <td><%= link_to 'Show', translation %></td>
-        <td><%= link_to 'Edit', edit_translation_path(translation) %></td>
-        <td><%= link_to 'Destroy', translation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
       </tr>
     <% end %>
   </tbody>
