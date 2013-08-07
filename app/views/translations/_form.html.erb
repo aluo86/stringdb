@@ -12,24 +12,20 @@
   <% end %>
 
   <div class="form-group">
-    <label> en-US </label>
-    <%= f.text_area :en_US %>
+    <%= f.label :en_US, "en_US" %>
+    <%= f.text_area :en_US, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :component %><br>
-    <%= f.text_area :component %>
+    <%= f.label :component %><%= f.text_area :component %>
   </div>
   <div class="field">
-    String-ID<br>
-    <%= f.text_area :string_id %>
+    <label>String-ID<label><%= f.text_area :string_id %>
   </div>
   <div class="field">
-    en-GB<br>
-    <%= f.text_area :en_GB %>
+    <label>en-GB<label><%= f.text_area :en_GB %>
   </div>
   <div class="field">
-    es-MX<br>
-    <%= f.text_area :es_MX %>
+    <lable>es-MX</label><%= f.text_area :es_MX %>
   </div>
   <div class="field">
     fr-CA<br>
